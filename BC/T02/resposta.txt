@@ -1,0 +1,31 @@
+Nome: Matheus Fonseca Alexandre de Oliveira
+RA: 1794027
+
+Trabalho 2 - Agente e Formulação de Problemas de Busca
+
+Questão 1 - Ver código
+
+Enviroment				-> Classe Model e View
+Agente					-> Classe Agente
+Sensor					-> Agente.sensorPosicao()
+What the world is like now		-> Agente.estAtu
+State					-> Agente.estAtu e Agente.instancia_problema.crencaLabir
+How the world evolves			-> Problema.suc()
+What my actions do			-> acoesPossiveis()
+What if will be like if i do action A	-> procura_caminho()
+Goals					-> Agente.instancia_problema.EstObj
+What action i should do now		-> Agente.deliberar()
+Actuators				-> Agente.ExecutaIr()
+
+
+Questão 3:
+
+3.1 - Sâo 8 ações ao todo. 
+Se mover nas direções: N, NE, L, SE, S, SO, O, NO
+Porém, ele sempre pode voltar para um estado que ele já esteve anteriormente. (Ficar indo e voltando). Dando uma quantidade infinita de plano de ações.
+
+3.2 - O tamanho seria todos os espaços que podem ser ocupados pelo agente. Considerando que o labirinto tem espaços que não podem ser ocupados (as paredes), os valores seriam [Número total de Espaços] - [Número de Paredes], dando 53 espaços.
+
+3.3 - O agente, dessa vez mantém uma "crença" de como é o labirinto, que utiliza para tomar suas decisões. Além disso, essa "crença" carrega consigo: o ínicio, o objetivo, e onde ele está agora.
+
+3.4 - Correspondem ao estado simulado. O tempo todo o agente toma decisões baseado no estado simulado que ele mantém do labirinto na sua "cabeça". Por causa dessa crença do labirinto diferir do labirinto real, quando ocorre divergências, isso afeta a movimentação do agente, uma ação esperada pode não ser possível de ser executada, ou terminando em um estado que o agente não esperava. (Ex: tentar forçar caminho contra uma parede que o agente não sabia que existia ali). Essas divergências podem vir: a crença não era fiel ao mundo real, seu sensor não funciona corretamente (passa a informação errada da onde ele está, afetando o processo de deliberar), seu atuador não funciona corretamente (ele pode "derrapar" e cair num lugar diferente da que a função sucessora disse pra ele), etc.

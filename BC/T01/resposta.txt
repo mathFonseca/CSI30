@@ -1,0 +1,27 @@
+Nome: Matheus Fonseca Alexandre de Oliveira
+RA: 1794027
+
+Trabalho 1 - Ambiente Labirinto
+
+Questão 1 - Características do ambiente:
+
+1 - Completamente Observável. Os sensores do agente retornam completamente a sua posição, que
+considero ser o estado do ambiente.
+2 - Um só agente
+3 - (Não faz sentido classificar Competitivo / Cooperativo se só tem 1 agente)
+4 - Determinístico. A ação do agente move-o completamente para outro estado.
+5 - Episódico. O agente não mantém histórico das ações, de forma que a ação atual depende 
+unicamente do estado em que ela se encontra. 
+6 - Estático. O ambiente não se altera enquanto o agente delibera 
+7 - Discreto. O ambiente contém um número finito de percepções e ações.
+
+Questão 2 - Espaço de Estados:
+
+Se considerarmos que um estado do ambiente é a posição do agente (linha, coluna) no labirinto,
+e levando em conta que o agente não pode permanecer dentro de paredes, o agente tem uma quantidade
+discreta, limitada, de espaços possíveis de ocupar, que determina então a quantidade de estados
+possíveis.
+
+Assim sendo, contando todos os espaços que o aggente pode ocupar, o tamanho do espaço de estados
+é 53 (Se as contas não falharam, existem 81 posições possíveis numa matrix 9x9, e como existem  
+28 paredes, restam 53 espaços).
