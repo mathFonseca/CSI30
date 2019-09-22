@@ -155,7 +155,7 @@ public class Agente implements PontosCardeais
 
 
     public float h1(Estado atual){
-        return (float) Math.sqrt( (atual.getLin()-estObj.getLin())*(atual.getLin()-estObj.getLin()) + (atual.getCol()-estObj.getCol())*(atual.getCol()-estObj.getCol()) );    
+        return (float) Math.sqrt( (atual.getLin()-estObj.getLin())*(atual.getLin()-estObj.getLin()) + (atual.getCol()-estObj.getCol())*(atual.getCol()-estObj.getCol()) );
     }
     public float h2(Estado atual){
         return 0;
